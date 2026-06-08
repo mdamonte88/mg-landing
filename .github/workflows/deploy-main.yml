@@ -18,6 +18,11 @@ jobs:
           node-version-file: .nvmrc
           cache: npm
 
+      - name: Check Node version
+        run: |
+          node -v
+          npm -v
+
       - name: Start SSH agent
         uses: webfactory/ssh-agent@v0.9.0
         with:
