@@ -23,6 +23,11 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.BLUDCODE_SSH_KEY }}
 
+      - name: Debug SSH
+        run: |
+          ssh -o StrictHostKeyChecking=no -T git@github.com || true
+          git ls-remote git@github.com:mdamonte88/bludcode-landing-ui.git
+
       - name: Install dependencies
         run: npm ci
 
