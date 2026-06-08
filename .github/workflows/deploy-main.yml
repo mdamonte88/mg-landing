@@ -2,7 +2,7 @@ name: CI MG Arquitectura e Ingenieria - Deploy to DigitalOcean (master) V1
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   deploy:
