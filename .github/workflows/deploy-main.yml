@@ -37,7 +37,7 @@ jobs:
       - name: Verify build output
         run: |
           ls -la dist
-          test -f dist/index.html
+          test -f dist/index.js
 
       - name: Upload build to server
         uses: appleboy/scp-action@v0.1.7
