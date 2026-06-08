@@ -112,13 +112,13 @@ class Header extends Component {
           <div className="right">
             {/* <-- <div className="selection-trigger"> <a href="#home" onClick={this.showSection('slide-1')}> Home </a> </div>
               <div className="sep">|</div> --> */}
-            <div className="selection-trigger"><a href="#sobreNosotros" onClick={this.activeSection('slide-2')}>Sobre Nosotrosss </a> </div>
+            <div className="selection-trigger"><a href="#sobreNosotros" onClick={() => this.activeSection('slide-2')}>Sobre Nosotrosss </a> </div>
             <div className="sep">|</div>
-            <div className="selection-trigger"><a href="#nuestrosProductos" onClick={this.activeSection('slide-3')}>Nuestros Productos </a> </div>
+            <div className="selection-trigger"><a href="#nuestrosProductos" onClick={() => this.activeSection('slide-3')}>Nuestros Productos </a> </div>
             <div className="sep">|</div>
-            <div className="selection-trigger"><a href="#nuestrosProductos" onClick={this.activeSection('slide-4')}>Trabajos Realizados </a> </div>
+            <div className="selection-trigger"><a href="#nuestrosProductos" onClick={() => this.activeSection('slide-4')}>Trabajos Realizados </a> </div>
             <div className="sep">|</div>
-            <div className="selection-trigger"><a href="#contacto" onClick={this.activeSection('slide-5')}>Contacto </a> </div>
+            <div className="selection-trigger"><a href="#contacto" onClick={() => this.activeSection('slide-5')}>Contacto </a> </div>
           </div>
         </div>
         {/* <!--[if lt IE 7]>
@@ -140,15 +140,15 @@ class Header extends Component {
 
           <div className="navbar-collapse collapse" id="bs-example-navbar-collapse-8">
             <ul className="nav navbar-nav col-xs-12 col-ms-6 col-sm-6 col-md-6 col-lg-6">
-              <li id="nav1" className="active"><a className="noSeparator" href="#home" data-toggle="collapse" data-target=".in" onClick={this.activeSection('slide-1')} >Home</a></li>
-              <li id="nav3"><a href="#porque" data-toggle="collapse" data-target=".in" onClick={this.activeSection('slide-3')} >Why</a></li>
-              <li id="nav4"><a href="#como" data-toggle="collapse" data-target=".in" onClick={this.activeSection('slide-4')} >How</a></li>
-              <li id="nav5"><a href="#que" data-toggle="collapse" data-target=".in" onClick={this.activeSection('slide-5')} >What</a></li>
-              <li id="nav2"><a href="#quienesSomos" data-toggle="collapse" data-target=".in" onClick={this.activeSection('slide-2')} >About us</a></li>
-              <li id="nav6"><a href="#contacto" data-toggle="collapse" data-target=".in" onClick={this.activeSection('slide-6')} >Contact</a></li>
+              <li id="nav1" className="active"><a className="noSeparator" href="#home" data-toggle="collapse" data-target=".in" onClick={() => this.activeSection('slide-1')} >Home</a></li>
+              <li id="nav3"><a href="#porque" data-toggle="collapse" data-target=".in" onClick={() => this.activeSection('slide-3')} >Why</a></li>
+              <li id="nav4"><a href="#como" data-toggle="collapse" data-target=".in" onClick={() => this.activeSection('slide-4')} >How</a></li>
+              <li id="nav5"><a href="#que" data-toggle="collapse" data-target=".in" onClick={() => this.activeSection('slide-5')} >What</a></li>
+              <li id="nav2"><a href="#quienesSomos" data-toggle="collapse" data-target=".in" onClick={() => this.activeSection('slide-2')} >About us</a></li>
+              <li id="nav6"><a href="#contacto" data-toggle="collapse" data-target=".in" onClick={() => this.activeSection('slide-6')} >Contact</a></li>
             </ul>
 
-            <div className="logoHeader" onClick={this.activeSection('slide-7')} />
+            <div className="logoHeader" onClick={() => this.activeSection('slide-7')} />
 
             <ul className="nav navbar-nav pull-left-xs-12 pull-right">
               <li id="nav7"><a className="noSeparator" href="#clientes" onClick={this.active1} >Customers</a></li>

@@ -115,14 +115,15 @@
   },
   "scripts": {
     "preinstall": "node tools/nodeVersionCheck.js",
-    "start-message": "babel-node tools/startMessage.js",
+    "postinstall": "node tools/fixBludcodeLandingUiPaths.js && npm --prefix node_modules/bludcode-landing-ui run build",
+    "start-message": "BABEL_DISABLE_CACHE=1 babel-node tools/startMessage.js",
     "prestart": "babel src --out-dir dist",
     "start": "npm-run-all --parallel open:src",
     "start:server": "node server/build/server.js",
     "ssr": "npm run clean-ssr && npm run build:client && npm run build:server && npm run start:server",
     "heroku-postbuild": "npm run build:client && npm run build:server",
-    "open:src": "babel-node tools/srcServer.js",
-    "open:dist": "babel-node tools/distServer.js",
+    "open:src": "BABEL_DISABLE_CACHE=1 babel-node tools/srcServer.js",
+    "open:dist": "BABEL_DISABLE_CACHE=1 babel-node tools/distServer.js",
     "lint:code": "eslint webpack/webpack.config.* src tools server --color",
     "lint:style": "stylelint \"src/styles/**/*.scss\"",
     "lint": "eslint src/**/*.js src/**/*.jsx",
@@ -130,14 +131,14 @@
     "clean-ssr": "rimraf ./server/build",
     "remove-dist": "rimraf ./dist",
     "prebuild": "npm run clean-dist && npm run lint && npm run test",
-    "build": "babel-node tools/build.js",
-    "build:server": "babel-node server/scripts/buildServer.js",
-    "build:client": "babel-node server/scripts/buildClient.js",
+    "build": "BABEL_DISABLE_CACHE=1 babel-node tools/build.js",
+    "build:server": "BABEL_DISABLE_CACHE=1 babel-node server/scripts/buildServer.js",
+    "build:client": "BABEL_DISABLE_CACHE=1 babel-node server/scripts/buildClient.js",
     "test": "jest",
     "test:cover": "npm run test -- --coverage",
     "test:watch": "npm run test -- --watch",
-    "deploy": "npm run build && babel-node tools/deployS3",
-    "analyze-bundle": "babel-node ./tools/analyzeBundle.js"
+    "deploy": "npm run build && BABEL_DISABLE_CACHE=1 babel-node tools/deployS3",
+    "analyze-bundle": "BABEL_DISABLE_CACHE=1 babel-node ./tools/analyzeBundle.js"
   },
   "browserslist": {
     "production": [
