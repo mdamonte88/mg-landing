@@ -27,7 +27,7 @@ class Contact extends PureComponent {
   }
 
   render() {
-    const mapStyle = { witdh: '70%', height: '70%' };
+    const mapStyle = { width: '70%', height: '70%' };
     const SimpleMap = typeof window !== 'undefined' ? require('bludcode-landing-ui').SimpleMap : null;
     return (
       <section id="slide-6" className="contactSlide contentbox">

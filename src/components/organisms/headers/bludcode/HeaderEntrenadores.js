@@ -95,13 +95,13 @@ class HeaderAluven extends Component {
             <div className="right">
               {/* <-- <div className="selection-trigger"> <a href="#home" onClick={this.showSection('slide-1')}> Home </a> </div>
               <div className="sep">|</div> --> */}
-              <div className="selection-trigger"><a href="#sobreNosotros" onClick={this.activeSection('slide-2')}>Sobre Nosotros </a> </div>
+              <div className="selection-trigger"><a href="#sobreNosotros" onClick={() => this.activeSection('slide-2')}>Sobre Nosotros </a> </div>
               <div className="sep">|</div>
-              <div className="selection-trigger"><a href="#nuestrosProductos" onClick={this.activeSection('slide-3')}>Nuestros Productos </a> </div>
+              <div className="selection-trigger"><a href="#nuestrosProductos" onClick={() => this.activeSection('slide-3')}>Nuestros Productos </a> </div>
               <div className="sep">|</div>
-              <div className="selection-trigger"><a href="#nuestrosProductos" onClick={this.activeSection('slide-4')}>Trabajos Realizados </a> </div>
+              <div className="selection-trigger"><a href="#nuestrosProductos" onClick={() => this.activeSection('slide-4')}>Trabajos Realizados </a> </div>
               <div className="sep">|</div>
-              <div className="selection-trigger"><a href="#contacto" onClick={this.activeSection('slide-5')}>Contacto </a> </div>
+              <div className="selection-trigger"><a href="#contacto" onClick={() => this.activeSection('slide-5')}>Contacto </a> </div>
             </div>
           </div>
         </div>
