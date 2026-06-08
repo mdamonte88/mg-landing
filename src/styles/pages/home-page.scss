@@ -1,0 +1,127 @@
+@import './home-page-responsive';
+
+
+/* ==========================================================================
+   FONTS
+===========================================================================*/
+
+
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Myriad-Pro';
+    src: url('../fonts/Myriad-Pro/Myriad-Pro.eot'); /* IE */
+    src: url("../fonts/Myriad-Pro/Myriad-Pro.eot?#iefix") format("embedded-opentype"),
+         url('../fonts/Myriad-Pro/Myriad-Pro.ttf') format('truetype'); /* non-IE */
+    /*src: local('Myriad-Pro'), url('../fonts/Myriad-Pro/Myriad-Pro.ttf') format('truetype'); /* non-IE */
+    /*src: local('Myriad-Pro'), url('fonts/Myriad-Pro.woff') format('woff'); /* Modern Browsers */
+}
+@font-face {
+    font-family: 'Myriad-Pro-Bold';
+    src: url('../fonts/Myriad-Pro/Myriad-Pro-Bold.eot'); /* IE */
+    src: local('Myriad-Pro-Bold'), url('../fonts/Myriad-Pro/Myriad-Pro-Bold.ttf') format('truetype'); /* non-IE */
+    /*src: local('Myriad-Pro-Bold'), url('fonts/Myriad-Pro-Bold.woff') format('woff'); /* Modern Browsers */
+}
+@font-face {
+    font-family: 'Myriad-Pro-Bolder';
+    src: url('../fonts/Myriad-Pro/Myriad-Pro-Bolder.eot'); /* IE */
+    src: local('Myriad-Pro-Bolder'), url('../fonts/Myriad-Pro/Myriad-Pro-Bolder.ttf') format('truetype'); /* non-IE */
+    /*src: local('Myriad-Pro-Bolder'), url('fonts/Myriad-Pro-Bolder.woff') format('woff'); /* Modern Browsers */
+}
+
+
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+	html{
+		width: 100%;
+		height: auto;
+		/* overflow: hidden; */
+	}
+
+	body{
+		height: 100%;
+		width: 100%;
+		font-family: 'Myriad-Pro',sans-serif;
+	}
+
+/*****************************************************************************
+GENERAL
+
+******************************************************************************/
+
+	main {
+	    position: absolute;
+	    top: 0;
+		width: 100%;
+		overflow: hidden;
+	}
+
+	.container {
+		margin-right: 0;
+		margin-left: 0;
+		padding-left: 0;
+		padding-right: 0;
+		width: 100%;
+	}
+
+	section.homeSlide{
+		position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+	}
+
+	.scrollContainer{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		z-index: 1;
+	}
+
+	.logoHeader {
+		background-repeat: no-repeat;
+		background-position: center;
+		bottom: 2%;
+		left: calc(50% - 25px);
+		padding: 0;
+		position: fixed;
+		z-index: 9999999999;
+		cursor: pointer;
+	}
+
+/****************
+SECCIONES
+*****************/
+
+#slide-intro {
+	background: none repeat scroll 0 0 #2f343a;
+	background-image: url('../assets/backgrounds/medium/geometric-1732847_1920.jpg');
+    display: table;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 0 16%;
+}
+
+#slide-intro span{
+	display: table-cell;
+    height: 100%;
+    text-align: left;
+    vertical-align: middle;
+    font-size: 4.5em;
+    color: #faf7f0;
+    line-height: 100%;
+    padding: 0 13%;
+}
+
+

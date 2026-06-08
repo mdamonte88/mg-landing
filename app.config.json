@@ -1,0 +1,9 @@
+{
+  apps: [
+    {
+      name: "homepagemg-app",
+      script: "npm",
+      args: "run open:dist"
+    }
+  ]
+}

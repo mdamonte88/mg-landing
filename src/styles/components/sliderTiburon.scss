@@ -1,0 +1,24 @@
+.section-home-hero .home-carousel-wrap {
+    position: relative;
+
+    &.wow {
+        visibility: visible;
+    }
+}
+
+.section-home-hero .home-carousel-wrap .home-carousel {
+    height: 100%;
+    z-index: unset;
+}
+
+.owl-carousel{
+  display: block;
+
+  &.owl-loaded {
+      display: block;
+  }
+}
+
+.owl-carousel, .owl-stage-outer, .owl-stage, .owl-item, .owl-item .item, .owl-wrapper {
+    transition: none;
+}

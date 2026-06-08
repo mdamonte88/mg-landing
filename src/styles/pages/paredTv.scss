@@ -1,0 +1,56 @@
+.containerTitles{
+	clear: both;
+    float: left;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 999;
+    top: 15%;
+	padding: 0;
+}
+
+.row.table-row {
+	height: 100%;
+}
+
+#slide-1 .titleTv{
+	float: left;
+	color: white;
+	font-size: 30px;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+}
+
+#slide-1 .titleTv img{
+	cursor: pointer;
+}
+
+#slide-1 .colTitleTv{
+	display: table;
+	position: relative;
+	background: #2f343a;
+	opacity: 0;
+	height: 0%;
+	overflow: hidden;
+	/*height: 100%;*/
+}
+
+#slide-1 .colTitleTv .textColTv{
+    display: table-cell;
+    color: #faf7f0;
+    height: 100%;
+    vertical-align: middle;
+    text-align: center;
+    padding: 0 7%;
+    /*position: absolute;
+    top: 20%;*/
+}
+
+.iconoCerrar{
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 65%;
+    cursor: pointer;
+}
+

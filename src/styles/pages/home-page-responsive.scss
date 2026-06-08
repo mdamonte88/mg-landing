@@ -1,0 +1,372 @@
+
+/* Extra small devices (phones, less than 768px) */
+@media(max-width:768px){
+  /*******
+    MENU
+  ****************/
+      .navbar-nav {
+      float: left;
+      margin: 0;
+      margin-bottom: 7px;
+  }
+      #nav8{
+    float: left;
+  }
+  #nav9{
+    float: left;
+  }
+
+  .navbar-inverse .navbar-nav > li > a{
+      background: none !important;
+  }
+
+  .navbar-inverse .navbar-nav > .active > a {
+      background: none;
+  }
+
+  .pull-left-xs-12{
+      clear: both;
+      float: left !important;
+      width: 100%;
+  }
+
+
+  /*********************
+    GENERAL
+  *********************/
+  #slide-1 .bcg {background-image:url('../assets/backgrounds/large/back1.jpg');}
+  /* Slide 2 QUIENES SOMOS*/
+  #slide-2 .bcg {background-image:url('../assets/backgrounds/softwareProgramming.jpg');}
+  /* Slide 3 PORQUE*/
+  #slide-3 .bcg {background-image:url('../assets/backgrounds/large/back3.jpg');}
+  /* Slide 4 COMO*/
+  #slide-4 .bcg {background-image:url('../assets/backgrounds/responsive.jpg');}
+  /* Slide 5 QUE*/
+  #slide-5 .bcg {background-image:url('../assets/backgrounds/large/back5.jpg');}
+  /* Slide 6 CONTACTO*/
+  #slide-6 .bcg {
+    background-image:url('../assets/backgrounds/large/back6.jpg');
+    background-attachment: initial;
+  }
+
+  #slide-6 .hsContent {
+    height: 62%;
+    padding: 5% 1.5%;
+    position: absolute;
+    left: 31%;
+    top: 14%;
+    width: 44%;
+  }
+
+  /* Slide 7 CLIENTES */
+  #slide-7 .bcg {background-image:url('../assets/backgrounds/extraSmall/back7.jpg');}
+
+  .bcg .spn_text{
+    font-size: 25px;
+  }
+
+  .bcg .spn_textRotate{
+    font-size: 12px;
+  }
+
+  /*********************
+  INTRO
+  **********************/
+  #slide-intro span{
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+
+  /*********************
+  AYER HOY MAÑANA
+  *********************/
+  #slide-1 .colTitleTv .textColTv{
+    font-size: 10px !important;
+    padding: 0 0 !important;
+  }
+  .iconoCerrar{
+    background-position: center !important;
+    left: 50%;
+  }
+  .logoHeader {
+    background: url('../assets/logo.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    top: 3px;
+  }
+
+  /***************************
+  CONTACTO
+  ****************************/
+
+
+}
+
+
+/* Small devices (tablets, 768px and up) */
+@media(min-width:768px){
+  /*******
+    MENU
+  ****************/
+  .navbar-nav {
+    margin: 10px 0 10px 8%;
+  }
+
+  /*********************
+  GENERAL
+  *********************/
+
+  #slide-1 .bcg {background-image:url('../assets/backgrounds/small/back1.jpg');}
+  /* Slide 2 QUIENES SOMOS*/
+  #slide-2 .bcg {background-image:url('../assets/backgrounds/softwareProgramming.jpg');}
+  /* Slide 3 PORQUE*/
+  #slide-3 .bcg {background-image:url('../assets/backgrounds/small/back3.jpg');}
+  /* Slide 4 COMO*/
+  #slide-4 .bcg {background-image:url('../assets/backgrounds/responsive.jpg');}
+  /* Slide 5 QUE*/
+  #slide-5 .bcg {background-image:url('../assets/backgrounds/small/back5.jpg');}
+  /* Slide 6 CONTACTO*/
+  #slide-6 .bcg {
+    background-image:url('../assets/backgrounds/small/back6.jpg');
+    background-attachment: initial;
+  }
+
+  #slide-6 .hsContent {
+    height: 62%;
+    padding: 5% 2%;
+    position: absolute;
+    left: 37%;
+    top: 14%;
+    width: 29.5%;
+  }
+
+  /* Slide 7 CLIENTES */
+  #slide-7 .bcg {background-image:url('../assets/backgrounds/small/back7.jpg');}
+
+  .bcg .spn_text{
+    font-size: 75px;
+  }
+              .bcg .spn_textRotate{
+    font-size: 18px;
+  }
+
+  /*********************
+  INTRO
+  **********************/
+  #slide-intro span{
+    font-size: 35px;
+    font-weight: bold;
+  }
+
+  /*********************
+  AYER HOY MAÑANA
+  *********************/
+  #slide-1 .colTitleTv .textColTv{
+    font-size: 18px;
+  }
+  .iconoCerrar{
+    background-position: center !important;
+    left: 50%;
+    }
+  .logoHeader {
+    background: url('../assets/logo.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    top: 3px;
+    left: 0;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media(min-width:992px){
+  /*******
+   MENU
+  ****************/
+  .navbar-nav {
+    margin: 20px 0 20px 8%;
+  }
+
+  /*********************
+  GENERAL
+  *********************/
+
+  #slide-1 .bcg {background-image:url('../assets/backgrounds/medium/back1.jpg');}
+  /* Slide 2 QUIENES SOMOS*/
+  #slide-2 .bcg {background-image:url('../assets/backgrounds/softwareProgramming.jpg');}
+  /* Slide 3 PORQUE*/
+  #slide-3 .bcg {background-image:url('../assets/backgrounds/medium/back3.jpg');}
+  /* Slide 4 COMO*/
+  #slide-4 .bcg {background-image:url('../assets/backgrounds/responsive.jpg');}
+  /* Slide 5 QUE*/
+  #slide-5 .bcg {background-image:url('../assets/backgrounds/medium/back5.jpg');}
+  /* Slide 6 CONTACTO*/
+  #slide-6 .bcg {
+    background-image:url('../assets/backgrounds/medium/back6.jpg');
+    background-attachment: initial;
+  }
+
+  #slide-6 .hsContent {
+    height: 62%;
+    padding: 5% 2%;
+    position: absolute;
+    left: 39.1%;
+    top: 14%;
+    width: 25%;
+  }
+
+
+  /* Slide 7 CLIENTES */
+  #slide-7 .bcg {background-image:url('../assets/backgrounds/medium/back7.jpg');}
+
+  .bcg .spn_text{
+    font-size: 82px;
+  }
+              .bcg .spn_textRotate{
+    font-size: 22px;
+  }
+
+  /*********************
+  INTRO
+  **********************/
+  #slide-intro span{
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  /*********************
+  AYER HOY MAÑANA
+  *********************/
+  #slide-1 .colTitleTv .textColTv{
+    font-size: 18px;
+  }
+  .iconoCerrar{
+    background-position: center !important;
+    left: 50%;
+    }
+  .logoHeader {
+    background: url('../assets/logo.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    top: 7px;
+    left: 50%;
+  }
+  /*****************************
+  QUIENES SOMOS
+  *****************************/
+  #containerPhotos .photo{
+    float: left;
+    height: 120px;
+    width: 122px;
+  }
+  #containerPhotos #photo1{
+    background: url("../assets/forma.png") no-repeat;
+  }
+  #containerPhotos #photo2{
+    background: url("../assets/forma.png") no-repeat;
+  }
+  #containerPhotos #photo3{
+    background: url("../assets/forma.png") no-repeat;
+  }
+  #containerPhotos #photo4{
+    background: url("../assets/forma.png") no-repeat;
+  }
+  #containerPhotos #photo5{
+    background: url("../assets/forma.png") no-repeat;
+  }
+  #containerPhotos #photo6{
+    background: url("../assets/forma.png") no-repeat;
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media(min-width:1200px){
+  /*******
+   MENU
+  ****************/
+  .navbar-nav {
+    margin: 20px 0 20px 8%;
+  }
+
+  /*********************
+  GENERAL
+  *********************/
+
+  #slide-1 .bcg {background-image:url('../assets/backgrounds/large/back1.jpg');}
+  /* Slide 2 QUIENES SOMOS*/
+  #slide-2 .bcg {background-image:url('../assets/backgrounds/softwareProgramming.jpg');}
+  /* Slide 3 PORQUE*/
+  #slide-3 .bcg {background-image:url('../assets/backgrounds/large/back3.jpg');}
+  /* Slide 4 COMO*/
+  #slide-4 .bcg {background-image:url('../assets/backgrounds/responsive.jpg');}
+  /* Slide 5 QUE*/
+  #slide-5 .bcg {background-image:url('../assets/backgrounds/large/back5.jpg');}
+  /* Slide 6 CONTACTO*/
+  #slide-6 .bcg {
+    background-image:url('../assets/backgrounds/large/back6.jpg');
+    background-attachment: initial;
+  }
+
+  #slide-6 .hsContent {
+    height: 62%;
+    padding: 5% 2%;
+    position: absolute;
+    left: 40%;
+    top: 4%;
+    width: 23%;
+
+  }
+
+  /* Slide 7 CLIENTES */
+  #slide-7 .bcg {background-image:url('../assets/backgrounds/large/back7.jpg');}
+
+  .bcg .spn_text{
+    font-size: 85px;
+  }
+
+  .bcg .spn_textRotate{
+    font-size: 18px;
+  }
+
+  /*********************
+  INTRO
+  **********************/
+  #slide-intro span{
+    font-size: 62px;
+                      font-weight: bold;
+  }
+
+  /*********************
+  AYER HOY MAÑANA
+  *********************/
+  #slide-1 .colTitleTv .textColTv{
+    font-size: 18px;
+  }
+
+  .iconoCerrar{
+    background-position: center !important;
+    left: 50%;
+    }
+  .logoHeader {
+    background: url('../assets/logo.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    top: 10px;
+    left: 50%;
+  }
+  /*****************************
+  QUIENES SOMOS
+  *****************************/
+
+
+
+
+
+}

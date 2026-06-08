@@ -1,0 +1,271 @@
+.div_container{
+	width:100%;
+	height:100%;
+}
+
+.div_curtain{
+	top:-75%;
+	left:0;
+	position:relative;
+	width:50%;
+	height:500%;
+  background-color: rgba(8, 92, 176, 0.5);
+  background: linear-gradient(rgba(8, 92, 176,0.3), rgba(8, 92, 176, 1) 80%);
+	z-index: 5;
+  overflow: hidden;
+  opacity: 0.9;
+}
+
+.div_curtain.div_right{
+    left: 100%;
+    position: absolute;
+}
+
+.divTable{
+   position: absolute;
+   display: table;
+   width: 100%;
+   height: 50%;
+}
+
+
+.spn_text{
+    color: #ffffff;
+    font-size: 20px;
+	font-weight: bold;
+    padding: 0 10% 0 0;
+    text-align: right;
+    width: 100%;
+    vertical-align: middle;
+	line-height: 1;
+}
+
+.downWhite {
+	width: 54px;
+	height: 55px;
+	background: url('../assets/expandWhite.png') no-repeat scroll 0px 0px transparent;
+	position: absolute;
+	right: 7%;
+	cursor: pointer;
+	z-index: 9999;
+	display: block;
+}
+
+.collapseWhite {
+    background: url("../assets/collapseWhite.png") no-repeat scroll 0px 0px transparent;
+    height: 55px;
+    position: absolute;
+    left: 10%;
+    cursor: pointer;
+    width: 54px;
+}
+
+.textScroll{
+	display: none;
+    opacity: 0;
+    position: absolute;
+    right: 6%;
+    width: 0;
+	color: #ffffff;
+	font-size: 22px;
+	display: block;
+}
+
+.contYellow{
+	top: 10%;
+    height: 60px;
+    margin-bottom: -23px;
+    position: fixed;
+    right: 0;
+    width: 8%;
+	z-index: 500;
+	cursor: pointer;
+}
+
+.downYellow {
+	background: url('../assets/bajarAmarillo1.png') no-repeat scroll 0px 0px transparent;
+    height: 54px;
+    margin-bottom: -23px;
+    position: absolute;
+    right: 60%;
+    width: 54px;
+	z-index: 500;
+	cursor: pointer;
+}
+
+.downYellowArrow{
+	background: url('../assets/bajarAmarillo2.png') no-repeat scroll 0px 0px transparent;
+    height: 16px;
+    position: absolute;
+    right: 45%;
+    width: 11px;
+	z-index: 500;
+	margin-top: 19%;
+}
+
+
+.spn_textRotate{
+    text-align: justify;
+    font-weight: normal;
+    padding: 0% 10%;
+}
+
+.spanCell{
+    display: table-cell;
+}
+
+
+
+/*****
+OVERLAY
+******/
+/* Base and example */
+/* Base and example */
+
+a#overlaylaunch-inAbox {
+    display: block;
+    padding: 40px;
+    margin: 40px;
+    background-color: #efefef;
+    font-size: 1.6em;
+    text-decoration: none;
+    text-align: center;
+}
+
+.overlay .photoBig{
+	float: left;
+    height: 180px;
+    margin: 8% 0 0% 8%;
+    width: 180px;
+}
+
+.overlay .namePhoto{
+	color: #336981;
+    float: left;
+    height: 180px;
+    margin: 8% 8% 0% 1%;
+    position: relative;
+    width: 40%;
+}
+
+.overlay .namePhoto span{
+    bottom: 20%;
+    font-size: 27px;
+    position: absolute;
+}
+
+	#containerPhotos{
+        z-index: 4;
+        position: absolute;
+        top: 10%;
+        right: 0;
+        width: 50%;
+	}
+
+
+
+
+
+
+
+
+
+
+	#overlay-photo1 .photoBig{
+		background: url("../assets/forma.png") no-repeat scroll 0 0 / 180px auto rgba(0, 0, 0, 0);
+	}
+	#overlay-photo2 .photoBig{
+		background: url("../assets/forma.png") no-repeat scroll 0 0 / 180px auto rgba(0, 0, 0, 0);
+	}
+	#overlay-photo3 .photoBig{
+		background: url("../assets/forma.png") no-repeat scroll 0 0 / 180px auto rgba(0, 0, 0, 0);
+	}
+	#overlay-photo4 .photoBig{
+		background: url("../assets/forma.png") no-repeat scroll 0 0 / 180px auto rgba(0, 0, 0, 0);
+	}
+	#overlay-photo5 .photoBig{
+		background: url("../assets/forma.png") no-repeat scroll 0 0 / 180px auto rgba(0, 0, 0, 0);
+	}
+	#overlay-photo6 .photoBig{
+		background: url("../assets/forma.png") no-repeat scroll 0 0 / 180px auto rgba(0, 0, 0, 0);
+	}
+
+.overlay .wrapper {
+    color: #336981;
+    float: left;
+    margin: 0 4%;
+    padding: 10%;
+    text-align: left;
+    width: 92%;
+}
+
+
+/* More important stuff */
+
+.overlay,
+#overlay-shade {
+    display: none;
+}
+
+#overlay-shade {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: #000;
+}
+
+.overlay {
+    position: absolute;
+    top: -300px;
+    right: -300px;
+    width: 38%;
+    min-height: 400px;
+    z-index: 10000;
+    background-color: #FFFFFF;
+    color: #fff;
+    box-shadow: 0 0 16px #000;
+	border-radius: 5px;
+} .ie7 .overlay {
+    height: 200px;
+} .overlay .wrapper {
+    padding: 15px 30px 30px;
+}
+
+
+.overlay .toolbar {
+    line-height: 1;
+    overflow: hidden;
+    padding: 8px;
+    position: absolute;
+    right: -8%;
+    text-align: right;
+}
+.overlay .toolbar a.close {
+    display: inline-block;
+        *display: inline;
+         zoom: 1;
+    padding: 0 8px;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 18px;
+    border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -o-border-radius: 5px;
+    color: #999999;
+    background-color: #000000;
+	opacity: 1;
+} .overlay .toolbar a.close span {
+    color: #818181;
+} .overlay .toolbar a.close:hover,
+  .overlay .toolbar a.close:hover span {
+    background-color: #b90900;
+    color: #fff;
+}
+
+
+

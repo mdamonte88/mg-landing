@@ -1,0 +1,69 @@
+/**
+	CONTACTO CSS
+**/
+
+
+.hsContent {
+	height: 85%;
+	padding: 5% 2%;
+	position: absolute;
+	left: 40%;
+	top: 1%;
+	width: 23%;
+}
+
+.hsContent h2  {
+	color: #faf7f0;
+	background-color: rgba(20,23,27,0.55);
+	padding: 10px 5px;
+	font-size: 35px;
+	line-height: 38px;
+	margin-bottom: 12px;
+}
+.hsContent p {
+	width: 400px;
+	color: #b2b2b2;
+}
+.hsContent a {
+	color: #b2b2b2;
+	text-decoration: underline;
+}
+
+.hsContent .hsContentLeft{
+	/* background: url("../../img/contactoLogo.png") no-repeat scroll 50% center #ffffff; */
+	background-size: 95%; 
+	border-radius: 5px;
+	float: left;
+	height: 20%;
+	margin-left: 4%;
+	margin-right: 4%;
+	margin-top: 1%;
+	padding: 5px;
+	-webkit-box-shadow: 0 8px 12px -3px gray;
+	-moz-box-shadow: 0 8px 12px -3px gray;
+	box-shadow: 0 8px 12px -3px gray;
+}
+
+.hsContent form input, .hsContent form textarea{
+	-webkit-box-shadow:0 8px 12px -3px gray;
+	-moz-box-shadow: 0 8px 12px -3px gray;
+		box-shadow: 0 8px 12px -3px gray;
+		resize:none;
+	font-size: 16px;
+}
+
+.hsContent #messages{
+		font-size: 20px;
+}
+
+.hsContent .help-block{
+	color: #c79a3d !important;
+	font-size: 16px;
+	font-weight: bold;
+}
+		
+#slide-6 .hsContent .contact-form {
+	height: 463px;
+	margin: auto;
+	width: 100%;
+}

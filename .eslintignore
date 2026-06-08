@@ -1,0 +1,10 @@
+
+node_modules/*
+tools/*
+src/webpack-public-path.js
+src/js/scrollMagic/*
+src/js/toRemove/*
+src/js/skrollr.js
+src/js/imagesLoaded.js
+src/scripts/*
+server/build

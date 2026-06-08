@@ -1,0 +1,29 @@
+.stars {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  >div {
+    display: flex;
+    align-items: center;
+  }
+  svg {
+    max-width: 17px;
+    transition: all .25s ease;
+    cursor: pointer;
+    fill: #ffce42;
+    &:hover {
+      opacity: .6;
+      transform: scale(1.2);
+    }
+  }
+
+  &.centered {
+    justify-content: center;
+  }
+}
+
+.number-ratings {
+  font-size: .7rem;
+  margin-top: 3px;
+  margin-left: 3px;
+}

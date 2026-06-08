@@ -1,0 +1,613 @@
+@import 'settings';
+
+/*
+  #Colors
+*/
+$monza: #d0021b;
+$wild-sand: #f4f4f4;
+$saffron: #EFC537;
+$malibu: #7FD7F5;
+
+/*
+  #Icon
+*/
+ $close-icon: url('./../assets/close/close.png');
+ $bullet-icon: url('./../assets/icons/oval-2-copy@3x.png');
+ $phone-icon: url('./../assets/phone/i-6@3x.png');
+ $apple-icon: url('./../assets/appstore/appstore-button@3x.png');
+ $save-icon: url('./../assets/icons/saved.png');
+
+/*
+  The site has several pages with content splited in two slides:
+  1) Left slide with forms in Login, Register and Home pages
+  2) Right slide with a blue background and a phone
+ */
+
+.slides-container .slide {
+  float: left;
+  height: 1000px;
+
+  /*
+    #Main elements
+  */
+  hr {
+    margin: 19px auto 10.5px auto;
+    width: 120px;
+  }
+
+  p {
+    margin: auto;
+    text-align: center;
+  }
+
+  label {
+    color: $black;
+    font-family: $body-font-family;
+    font-size: 11px;
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 1.7px;
+    line-height: normal;
+    margin: 1rem 0 0;
+    min-height: 15px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  input {
+    margin: 0 0 0 0;
+  }
+
+  input.text-center {
+    text-align: center;
+  }
+
+  input[name="password"]::placeholder {
+    color: $light-gray;
+    font-family: $body-font-family;
+    font-size: 10px;
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    line-height: normal;
+    text-align: center;
+  }
+
+  select {
+    font-family: $body-font-family;
+    font-size: 12px;
+    margin: 0;
+    overflow-y: auto;
+    text-indent: calc(50% - 60px);
+  }
+
+  select.custom-select {
+    font-size: 13px;
+    min-height: 360px;
+    overflow: hidden;
+    padding: 0;
+
+    option.place-holder {
+      background-position: 10px;
+      background-repeat: no-repeat;
+      background-size: 20px;
+      border-bottom: 1px solid;
+      font-family: $body-font-family;
+      height: 14px;
+      letter-spacing: 1.9px;
+      padding: 8px 0 8px 1.5px;
+      text-indent: 5px;
+    }
+
+    option.custom-option {
+      background-position: 10px;
+      background-repeat: no-repeat;
+      background-size: 20px;
+      border-bottom: 1px solid;
+      height: 14px;
+      letter-spacing: 1.9px;
+      padding: 8px 0 8px 1.5px;
+      text-indent: 31px;
+    }
+
+    option.marked-option {
+      background-color: $wild-sand;
+      background-position: 10px;
+      background-repeat: no-repeat;
+      background-size: 20px;
+      border-bottom: 1px solid;
+      height: 14px;
+      letter-spacing: 1.9px;
+      padding: 8px 0 8px 1.5px;
+      text-indent: 31px;
+    }
+  }
+
+  span {
+    font-family: $body-font-family;
+    font-size: 12px;
+  }
+
+  .title {
+    height: 27px;
+
+    span {
+      color: $black;
+      font-family: $body-font-family;
+      font-size: 20px;
+      font-stretch: normal;
+      font-style: normal;
+      font-weight: bold;
+      letter-spacing: 3px;
+      line-height: normal;
+    }
+  }
+
+  .subTitle {
+    span {
+      color: $black;
+      font-family: $body-font-family;
+      font-size: 18px;
+      font-stretch: normal;
+      font-style: normal;
+      font-weight: 600;
+      letter-spacing: normal;
+      line-height: 32px;
+    }
+  }
+
+  .heading {
+    text-align: start;
+
+    span {
+      color: $black;
+      font-family: $body-font-family;
+      font-size: 14px;
+      font-stretch: normal;
+      font-style: normal;
+      font-weight: normal;
+      letter-spacing: normal;
+      line-height: 26px;
+    }
+  }
+
+  .forgot-your-password {
+    color: $black;
+    display: inherit;
+    font-family: $body-font-family;
+    font-size: 11px;
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: normal;
+    line-height: normal;
+    margin-bottom: 82px;
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  .signIn-link {
+    color: $black;
+    float: left;
+    font-family: $body-font-family;
+    font-size: 11px;
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 600;
+    height: 15px;
+    letter-spacing: 1.7px;
+    line-height: normal;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+  }
+
+  /*
+    #Div Blocks to separate elements
+  */
+  div.top-separator--small {
+    margin-top: 70px;
+  }
+
+  div.top-separator--big {
+    margin-top: 110px;
+  }
+
+  /*
+    #Main sections of a slide container (.slide)
+  */
+
+  .container-content {
+    float: left;
+    margin-bottom: 82px;
+    width: 100%;
+  }
+
+  .top-content {
+    margin: auto;
+    width: 321px;
+  }
+
+  .header-content {
+    background-color: $primary-color;
+    color: $white;
+    height: 59px;
+    padding-top: 17px;
+    text-align: center;
+
+    span {
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: 3px;
+    }
+
+    .close-icon {
+      background-image: $close-icon;
+      background-repeat: no-repeat;
+      float: right;
+      height: 24px;
+      margin-right: 13px;
+      margin-top: 5px;
+      width: 24px;
+    }
+  }
+
+  .content {
+    margin: 38px auto 0 auto;
+    width: 180px;
+  }
+
+  .footer-content {
+    margin: 38px auto 0 auto;
+    position: relative;
+    width: 216px;
+
+    .signIn-facebook {
+      color: $black;
+      font-family: $body-font-family;
+      font-size: 12px;
+      font-stretch: normal;
+      font-style: normal;
+      font-weight: bold;
+      letter-spacing: 2.4px;
+      line-height: normal;
+      margin-top: -25px;
+      position: absolute;
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  /*
+    PARAGRAPHS AND CUSTOMS ELEMENTS
+  */
+
+  p.bulletPoint {
+    background-image: $bullet-icon;
+    background-position-y: 7px;
+    background-repeat: no-repeat;
+    background-size: 11px;
+    color: $black;
+    font-family: $body-font-family;
+    font-size: 14px;
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: normal;
+    height: 104px;
+    letter-spacing: normal;
+    line-height: 26px;
+    padding-left: 15px;
+    text-align: left;
+
+    .startTextBold {
+      font-weight: bold;
+    }
+  }
+
+  p.bulletPoint:first-child {
+    margin-top: 58px;
+  }
+
+  .phone {
+    background-image: $phone-icon;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 610px;
+    margin: 25px auto 0 auto;
+    object-fit: contain;
+    position: relative;
+    width: 325px;
+
+    .playVideo {
+      height: 68px;
+      left: calc(50% - 34px);
+      -o-object-fit: contain;
+      object-fit: contain;
+      position: absolute;
+      top: calc(50% - 34px + 16px);
+      width: 68px;
+    }
+  }
+
+  .apple-store {
+    background-image: $apple-icon;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 37px;
+    margin: 0 auto 20px auto;
+    width: 120px;
+  }
+
+  /*
+    #Icons
+  */
+
+  .icon {
+    height: 26px;
+    object-fit: contain;
+    width: 27px;
+  }
+
+  .smile-icon--big {
+    display: block;
+    height: 79px;
+    margin: 0 auto 15px auto;
+    width: 133px;
+  }
+
+  .saved-icon--small {
+    background-image: $save-icon;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: auto;
+  }
+
+  /*
+    #Markers
+  */
+
+  .marker-point {
+    background-color: rgba($saffron, .7);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+
+  .marker-point__selected {
+    background-color: rgba($malibu, .7);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+
+  .marker-point__new {
+    background-color: rgba($white, 0.7);
+    border: 1px solid rgba($saffron, .7);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 3.25rem;
+    height: 3.25rem;
+
+    .point {
+      background-image: url('./../assets/markers/markerPoint.png');
+      width: 2.8rem;
+      height: 3.25rem;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: -50%;
+      left: .163rem;
+    }
+  }
+
+  /*
+    #Buttons
+  */
+  button {
+    background-color: $black;
+    box-shadow: 0 2px 4px 0 rgba($black, .3);
+    color: $white;
+    font-size: 11px;
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 600;
+    height: 37px;
+    letter-spacing: 1.7px;
+    line-height: normal;
+    text-align: center;
+    width: 100%;
+  }
+
+  button.sign-up-button {
+    margin-top: 34px;
+  }
+
+  button.sign-in-button {
+    margin-top: 22px;
+  }
+
+  button.delete-button {
+    background-color: $monza;
+    margin-right: .6rem;
+  }
+}
+
+.slides-container .slide.slideLeft {
+  width: 357px;
+}
+
+.slides-container .slide.slideCenter {
+  width: calc(100% - 357px);
+}
+
+.slides-container .slide:last-of-type {
+  background-color: $primary-color;
+}
+
+/*
+  Components
+*/
+
+.target-point {
+  .social-networks {
+    height: 37px;
+    margin: auto;
+    text-align: center;
+    width: 120px;
+
+    .icon:first-child {
+      margin-right: 22px;
+    }
+  }
+}
+
+/*
+  Login-Page
+*/
+
+.login {
+  .slide {
+    .login-content {
+      width: 188px;
+    }
+
+    .forgot-your-password span {
+      color: $black;
+      display: inherit;
+      font-family: $body-font-family;
+      font-size: 11px;
+      font-stretch: normal;
+      font-style: normal;
+      font-weight: 600;
+      letter-spacing: normal;
+      line-height: normal;
+      margin-bottom: 82px;
+      margin-top: 15px;
+      text-align: center;
+    }
+  }
+}
+
+/*
+ # GOOGLE MAP REACT
+*/
+
+.homepage {
+  .slide .create-target {
+    margin: 16px auto;
+    width: 257px;
+
+    label {
+      padding-left: 3px;
+      text-align: left;
+    }
+
+    input.area {
+      color: $black;
+      font-family: $body-font-family;
+      font-size: 13px;
+      font-stretch: normal;
+      font-style: normal;
+      font-weight: 600;
+      letter-spacing: 1.9px;
+      line-height: normal;
+    }
+
+    input.choose-title {
+      color: $black;
+      font-family: $body-font-family;
+      font-size: 11px;
+      font-stretch: normal;
+      font-style: normal;
+      font-weight: 600;
+      letter-spacing: .7px;
+      line-height: normal;
+      padding: 11px 12px;
+      text-align: left;
+    }
+
+    input.choose-title::placeholder {
+      color: $black;
+      font-family: $body-font-family;
+      font-size: 11px;
+      font-stretch: normal;
+      font-style: normal;
+      font-weight: 600;
+      letter-spacing: .7px;
+      line-height: normal;
+      padding: 11px 0;
+      text-align: left;
+    }
+
+    select.custom-select {
+      font-size: 13px;
+      min-height: 365px;
+      overflow: hidden;
+      padding: 0;
+
+      option.place-holder {
+        color: $black;
+        font-size: 11px;
+        font-stretch: normal;
+        font-style: normal;
+        font-weight: 600;
+        letter-spacing: .7px;
+        line-height: normal;
+        padding: 11px 28px;
+        text-align: left;
+      }
+    }
+
+    .wrapper-button {
+      align-items: center;
+      display: flex;
+      margin: 10px auto;
+      justify-content: center;
+
+      .create-target__button {
+        padding: 12px 6px;
+        width: auto;
+      }
+    }
+
+    .smile-icon--small {
+      display: block;
+      height: 28px;
+      margin: 21px auto;
+      width: 48px;
+    }
+  }
+
+  .target-group-container {
+    .target-group {
+      display: block;
+      height: 30px;
+      margin: auto;
+      width: 30px;
+    }
+
+    span {
+      float: left;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.6px;
+      margin: 6px 0 26px 0;
+      text-align: center;
+      width: 100%;
+    }
+  }
+}
