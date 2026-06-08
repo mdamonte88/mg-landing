@@ -10,7 +10,7 @@ const Ceo = ({
   onCanPlay
 }) => {
   const resolvedHeight = (style && (style.minHeight || style.height)) || sectionHeight;
-  const maxWidth = (style && (style.maxWidth || style.width)) || '1600px';
+  const maxWidth = (style && (style.maxWidth || style.width)) || '1400px';
   const padding = (style && style.padding) || '0';
 
   return (
