@@ -1,8 +1,8 @@
-name: CI MG Landing - Deploy to DigitalOcean (main)
+name: CI MG Arquitectura e Ingenieria - Deploy to DigitalOcean (master)
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   deploy:
@@ -21,7 +21,7 @@ jobs:
       - name: Start SSH agent
         uses: webfactory/ssh-agent@v0.9.0
         with:
-          ssh-private-key: ${{ secrets.DO_SSH_KEY }}
+          ssh-private-key: ${{ secrets.BLUDCODE_SSH_KEY }}
 
       - name: Install dependencies
         run: npm ci
@@ -39,7 +39,23 @@ jobs:
         with:
           host: ${{ secrets.DO_HOST }}
           username: ${{ secrets.DO_USER }}
-          key: ${{ secrets.DO_SSH_KEY }}
+          key: ${{ secrets.BLUDCODE_SSH_KEY }}
           port: ${{ secrets.DO_PORT }}
           source: "dist/*"
-          target: /var/www/mg-landing
+          target: /var/www/mgarquitectura.com
+
+      - name: Reload PM2
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.DO_HOST }}
+          username: ${{ secrets.DO_USER }}
+          key: ${{ secrets.DO_SSH_KEY }}
+          port: ${{ secrets.DO_PORT }}
+          script: |
+            set -e
+            cd /var/www/mgarquitectura.com
+            if pm2 describe "mgarquitectura.com" >/dev/null 2>&1; then
+              pm2 restart "mgarquitectura.com" --update-env
+            else
+              pm2 start npm --name "mgarquitectura.com" -- run start
+            fi
