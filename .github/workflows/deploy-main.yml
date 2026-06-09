@@ -41,19 +41,17 @@ jobs:
           node tools/fixBludcodeLandingUiPaths.js
           npm --prefix node_modules/bludcode-landing-ui run build
 
-      - name: Debug bludcode package
+      - name: Create missing SCSS files
         run: |
-          echo "=== Styles ==="
-          find node_modules/bludcode-landing-ui -name "*.scss" | sort
+          mkdir -p node_modules/bludcode-landing-ui/src/styles/components
 
-          echo "=== HeaderAluven import ==="
-          grep -n "navbarAluven" node_modules/bludcode-landing-ui/src/components/organism/headers/HeaderAluven.js || true
+          cat > node_modules/bludcode-landing-ui/src/styles/components/navbarAluven.scss << 'EOF'
+          @import './navbarCore.scss';
+          EOF
 
-          echo "=== HeaderTiburon import ==="
-          grep -n "navbarTiburon" node_modules/bludcode-landing-ui/src/components/organism/headers/HeaderTiburon.js || true
-
-          echo "=== Styles directory ==="
-          ls -R node_modules/bludcode-landing-ui/src/styles || true
+          cat > node_modules/bludcode-landing-ui/src/styles/components/navbarTiburon.scss << 'EOF'
+          @import './navbarCore.scss';
+          EOF
 
       - name: Build React app
         run: npm run build
@@ -61,7 +59,7 @@ jobs:
       - name: Verify build output
         run: |
           ls -la dist
-          test -f dist/index.js
+          test -f dist/index.html
 
       - name: Upload build to server
         uses: appleboy/scp-action@v0.1.7
