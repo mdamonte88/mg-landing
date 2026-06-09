@@ -7,6 +7,19 @@ const replacements = [
   {
     file: path.join(packageRoot, 'src', 'components', 'organism', 'headers', 'HeaderBludcodeBlue.js'),
     pairs: [
+      ['../../../../styles/components/navbar.scss', '../../../styles/components/navbar.scss'],
+      ['../../../../styles/components/navbarBludcode.scss', '../../../styles/components/navbarBludcode.scss'],
+      ['../../../../js/autoScrollTo.js', '../../../js/autoScrollTo.js'],
+      ['../../../../styles/components/progressBar.scss', '../../../styles/components/progressBar.scss'],
+      ['../../../../images/facebook.png', '../../../images/facebook.png'],
+      ['../../../../images/twitter.png', '../../../images/twitter.png'],
+      ['../../../../scripts/jquery.nicescroll.min.js', '../../../scripts/jquery.nicescroll.min.js']
+    ]
+  },
+  {
+    file: path.join(packageRoot, 'dist', 'components', 'organism', 'headers', 'HeaderBludcodeBlue.js'),
+    pairs: [
+      ['../../../../styles/components/navbar.scss', '../../../styles/components/navbar.scss'],
       ['../../../../styles/components/navbarBludcode.scss', '../../../styles/components/navbarBludcode.scss'],
       ['../../../../js/autoScrollTo.js', '../../../js/autoScrollTo.js'],
       ['../../../../styles/components/progressBar.scss', '../../../styles/components/progressBar.scss'],
@@ -18,7 +31,16 @@ const replacements = [
   {
     file: path.join(packageRoot, 'src', 'components', 'molecules', 'Layout', 'stars.js'),
     pairs: [
+      ['../../../../styles/components/molecules/stars.scss', '../../../styles/components/molecules/stars.scss'],
       ['../../styles/components/molecules/stars.scss', '../../../styles/components/molecules/stars.scss']
+    ]
+  },
+  {
+    file: path.join(packageRoot, 'src', 'components', 'organism', 'headers', 'HeaderAluven.js'),
+    pairs: [
+      ['../../../../styles/components/navbarAluven.scss', '../../../styles/components/navbarAluven.scss'],
+      ['../../../../images/logoAluven.jpeg', '../../../images/logoAluven.jpeg'],
+      ['../../../../js/autoScrollTo.js', '../../../js/autoScrollTo.js']
     ]
   },
   {
@@ -27,6 +49,14 @@ const replacements = [
       ['../../../../styles/components/navbarAluven.scss', '../../../styles/components/navbarAluven.scss'],
       ['../../../../images/logoAluven.jpeg', '../../../images/logoAluven.jpeg'],
       ['../../../../js/autoScrollTo.js', '../../../js/autoScrollTo.js']
+    ]
+  },
+  {
+    file: path.join(packageRoot, 'src', 'components', 'organism', 'headers', 'HeaderTiburon.js'),
+    pairs: [
+      ['../../../../styles/components/progressBar.scss', '../../../styles/components/progressBar.scss'],
+      ['../../../../images/logo-white.png', '../../../images/logo-white.png'],
+      ['../../../../styles/components/navbarTiburon.scss', '../../../styles/components/navbarTiburon.scss']
     ]
   },
   {
@@ -51,6 +81,9 @@ function copyRecursive(source, target) {
     }
 
     for (const entry of fs.readdirSync(source)) {
+      if (entry === 'src' || entry === 'node_modules' || entry.startsWith('.')) {
+        continue;
+      }
       copyRecursive(path.join(source, entry), path.join(target, entry));
     }
     return;
@@ -81,17 +114,14 @@ for (const { file, pairs } of replacements) {
 }
 
 const copies = [
-  ['src', 'assets', 'dist', 'assets'],
-  ['src', 'images', 'dist', 'images'],
-  ['src', 'js', 'dist', 'js'],
-  ['src', 'scripts', 'dist', 'scripts'],
-  ['src', 'styles', 'components', 'dist', 'styles', 'components']
+  [path.join(packageRoot, 'dist', 'assets'), path.join(packageRoot, 'src', 'assets')],
+  [path.join(packageRoot, 'dist', 'images'), path.join(packageRoot, 'src', 'images')],
+  [path.join(packageRoot, 'dist', 'js'), path.join(packageRoot, 'src', 'js')],
+  [path.join(packageRoot, 'dist', 'scripts'), path.join(packageRoot, 'src', 'scripts')],
+  [path.join(packageRoot, 'dist', 'styles', 'components'), path.join(packageRoot, 'src', 'styles', 'components')]
 ];
 
-for (const segments of copies) {
-  const pivot = segments.indexOf('dist');
-  const source = path.resolve(__dirname, '..', ...segments.slice(0, pivot));
-  const target = path.join(packageRoot, ...segments.slice(pivot));
+for (const [source, target] of copies) {
   copyRecursive(source, target);
 }
 
