@@ -41,6 +41,20 @@ jobs:
           node tools/fixBludcodeLandingUiPaths.js
           npm --prefix node_modules/bludcode-landing-ui run build
 
+      - name: Debug bludcode package
+        run: |
+          echo "=== Styles ==="
+          find node_modules/bludcode-landing-ui -name "*.scss" | sort
+
+          echo "=== HeaderAluven import ==="
+          grep -n "navbarAluven" node_modules/bludcode-landing-ui/src/components/organism/headers/HeaderAluven.js || true
+
+          echo "=== HeaderTiburon import ==="
+          grep -n "navbarTiburon" node_modules/bludcode-landing-ui/src/components/organism/headers/HeaderTiburon.js || true
+
+          echo "=== Styles directory ==="
+          ls -R node_modules/bludcode-landing-ui/src/styles || true
+
       - name: Build React app
         run: npm run build
 
