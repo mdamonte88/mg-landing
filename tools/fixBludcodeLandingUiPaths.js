@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const packageRoot = path.resolve(__dirname, '..', 'node_modules', 'bludcode-landing-ui');
+const repoRoot = path.resolve(__dirname, '..');
 
 const replacements = [
   {
@@ -31,8 +32,13 @@ const replacements = [
   {
     file: path.join(packageRoot, 'src', 'components', 'molecules', 'Layout', 'stars.js'),
     pairs: [
-      ['../../../../styles/components/molecules/stars.scss', '../../../styles/components/molecules/stars.scss'],
-      ['../../styles/components/molecules/stars.scss', '../../../styles/components/molecules/stars.scss']
+      ['../../../../styles/components/molecules/stars.scss', '../../../styles/components/molecules/stars.scss']
+    ]
+  },
+  {
+    file: path.join(packageRoot, 'dist', 'components', 'molecules', 'Layout', 'stars.js'),
+    pairs: [
+      ['../../../../styles/components/molecules/stars.scss', '../../../styles/components/molecules/stars.scss']
     ]
   },
   {
@@ -114,6 +120,8 @@ for (const { file, pairs } of replacements) {
 }
 
 const copies = [
+  [path.join(repoRoot, 'src', 'assets'), path.join(packageRoot, 'src', 'assets')],
+  [path.join(repoRoot, 'src', 'images'), path.join(packageRoot, 'src', 'images')],
   [path.join(packageRoot, 'dist', 'assets'), path.join(packageRoot, 'src', 'assets')],
   [path.join(packageRoot, 'dist', 'images'), path.join(packageRoot, 'src', 'images')],
   [path.join(packageRoot, 'dist', 'js'), path.join(packageRoot, 'src', 'js')],
