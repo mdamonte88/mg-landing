@@ -61,6 +61,18 @@ jobs:
           ls -la dist
           test -f dist/index.html
 
+      - name: Test SSH to server
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.DO_HOST }}
+          username: ${{ secrets.DO_USER }}
+          key: ${{ secrets.DO_SSH_KEY }}
+          port: ${{ secrets.DO_PORT }}
+          script: |
+            whoami
+            hostname
+            pwd
+
       - name: Upload build to server
         uses: appleboy/scp-action@v0.1.7
         with:
