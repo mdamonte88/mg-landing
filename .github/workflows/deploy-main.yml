@@ -78,7 +78,7 @@ jobs:
         with:
           host: ${{ secrets.DO_HOST }}
           username: ${{ secrets.DO_USER }}
-          key: ${{ secrets.BLUDCODE_SSH_KEY }}
+          key: ${{ secrets.DO_SSH_KEY }}
           port: ${{ secrets.DO_PORT }}
           source: "dist/*"
           target: /var/www/mgarquitectura.com
