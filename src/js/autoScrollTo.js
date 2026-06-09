@@ -11,7 +11,6 @@ export function autoScrollTo(element, callback) {
   const targetY = el && el.offsetTop;
   console.debug('auto');
   const $scrollTime = 800;
-  debugger;
 
   /* const bodyHeight = document.body.offsetHeight;
   const yPos = currentY + window.innerHeight; */
