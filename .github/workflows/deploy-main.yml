@@ -1,4 +1,4 @@
-name: CI MG Arquitectura e Ingenieria - Deploy to DigitalOcean (master) V1
+name: CI MG Arquitectura e Ingenieria - Deploy to DigitalOcean (master) V2
 
 on:
   push:
