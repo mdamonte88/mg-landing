@@ -28,5 +28,8 @@ app.listen(port, '0.0.0.0', function onStart(err) {
     console.log(err);
   }
   console.info(chalkInfo(`==> Listening on port ${port}. Open up http://0.0.0.0:${port}/ in your browser.`));
-  opn(`http://localhost:${port}`);
+  
+  if (process.env.NODE_ENV !== 'production' && process.env.OPEN_BROWSER !== 'false') {
+    opn(`http://0.0.0.0:${port}`);
+  }
 });
