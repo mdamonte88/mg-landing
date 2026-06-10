@@ -93,8 +93,6 @@ jobs:
           script: |
             set -e
             cd /var/www/mgarquitectura.com
-            if pm2 describe "mgarquitectura.com" >/dev/null 2>&1; then
-              pm2 restart "mgarquitectura.com" --update-env
-            else
-              pm2 start --name "mgarquitectura.com" npm -- start
-            fi
+            pm2 delete "mgarquitectura.com" >/dev/null 2>&1 || true
+            pm2 serve . 3004 --name "mgarquitectura.com" --spa
+            pm2 save
