@@ -14,52 +14,49 @@ import '../../styles/pages/home-page-mg-bludcode.scss';
 
 const serviceGroups = [
   {
-    title: 'Arquitectura y proyectos',
+    title: 'ARQUITECTURA Y DISEÑO',
     items: [
-      'Diseno de remodelaciones, interiores, oficinas, locales comerciales, fachada y espacios exteriores.',
-      'Anteproyectos.',
-      'Planos ejecutivos.',
-      'Regularizacion de construcciones.',
-      'Tramitacion de permisos.',
-      'Relevamiento arquitectonico.',
-      'Computos metricos.',
-      'Presupuestos.',
-      'Home staging.',
-      'Visualizacion 3D antes de construir.'
+      `Desarrollamos soluciones integrales de arquitectura y diseño para proyectos residenciales, comerciales y corporativos. Diseñamos remodelaciones, interiores, oficinas, locales comerciales, fachadas y espacios exteriores, combinando funcionalidad, estética y eficiencia en cada propuesta.
+
+      Brindamos asesoramiento desde las etapas iniciales del proyecto mediante anteproyectos, relevamientos arquitectónicos, planos ejecutivos, cómputos métricos y presupuestos. Además, gestionamos la regularización de construcciones y la tramitación de permisos, acompañando al cliente durante todo el proceso.
+
+      Complementamos nuestros servicios con visualización 3D, permitiendo conocer el resultado final antes de construir, y soluciones de home staging para potenciar la presentación y valorización de los espacios.`
     ]
   },
   {
-    title: 'Construccion y direccion de obra',
+    title: 'ASESORAMIENTO Y DIRECCIÓN DE OBRA DE ARQUITECTURA E INGENIERÍA',
     items: [
-      'Construccion.',
-      'Direccion de obra (seguimiento, control de calidad, inspeccion y gestion de cronogramas).'
+      `Ofrecemos servicios de asesoramiento y dirección de obra, poniendo a disposición profesionales especializados para la gestión y supervisión de proyectos de movimiento de suelos, arquitectura e ingeniería. 
+      
+      Nuestro objetivo es asegurar el cumplimiento de los plazos, la calidad de los trabajos y la correcta ejecución de cada proyecto.`
     ]
   },
   {
-    title: 'Servicios tecnicos y relevamientos',
+    title: 'SERVICIOS TÉCNICOS',
     items: [
-      'Informes tecnicos.',
-      'Relevamiento y diagnostico de patologias.',
-      'Memorias descriptivas.',
-      'Relevamiento fotografico.',
-      'Relevamiento con dron (ortomosaico, curvas de nivel y modelo digital de terreno).'
+      `Brindamos servicios técnicos especializados para el análisis, evaluación y documentación de obras y terrenos. Elaboramos informes técnicos, memorias descriptivas, relevamientos fotográficos y diagnósticos de patologías constructivas, proporcionando información confiable para la planificación y ejecución de proyectos.
+      Además, realizamos relevamientos con dron, obteniendo datos de alta precisión para la generación de ortomosaicos, curvas de nivel y modelos digitales de terreno, herramientas fundamentales para estudios topográficos, planificación de obras y control de avances.`
     ]
   },
   {
-    title: 'Mantenimiento y supervision',
+    title: 'MANTENIMIENTO CORPORATIVO',
     items: [
-      'Supervision.',
-      'Mantenimiento de oficinas, locales, restaurantes, clinicas y tiendas (contratos mensuales).'
+      `Brindamos soluciones integrales de mantenimiento corporativo adaptadas a las necesidades de cada cliente. Atendemos oficinas, locales comerciales, restaurantes, clínicas y todo tipo de instalaciones, mediante servicios programados que garantizan el buen estado, la seguridad y el funcionamiento continuo de los espacios.
+      Nuestro equipo realiza tareas de mantenimiento preventivo y correctivo, ofreciendo una gestión eficiente y una respuesta ágil para resolver cualquier requerimiento.`
     ]
   },
   {
-    title: 'Ejecucion en obra',
-    items: ['Supervision.', 'Ejecucion.']
+    title: 'OBRAS DE MOVIMIENTO DE SUELOS',
+    items: [
+      `Desarrollamos proyectos de movimiento de suelos mediante modalidades de contratación flexibles, ya sea ejecutando la obra en su totalidad o proporcionando servicios de administración y dirección técnica.
+      Nuestra experiencia abarca relevamientos topográficos, cálculo de volúmenes y metrajes, replanteos planialtimétricos, excavaciones, rellenos compactados, zanjeos y suministro de materiales de cantera, respaldados por maquinaria especializada para cada etapa de la obra.`
+    ]
   },
   {
-    title: 'Alquiler de equipos',
+    title: 'ALQUILER DE MAQUINARIA VIAL',
     items: [
-      'Alquiler de equipos para la construccion (camion, excavadora, retroexcavadora, compactadores y motoniveladora).'
+      `Ofrecemos servicios de alquiler de maquinaria y equipos para obras de construcción, movimiento de suelos e infraestructura. 
+      Disponemos de excavadoras, retroexcavadoras combinadas, camiones, minicargadores tipo Bobcat, compactadores lisos y de pata de cabra, entre otros equipos, adaptándonos a las necesidades específicas de cada proyecto.`
     ]
   }
 ];
