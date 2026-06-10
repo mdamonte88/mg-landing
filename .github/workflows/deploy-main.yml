@@ -93,6 +93,6 @@ jobs:
           script: |
             set -e
             cd /var/www/mgarquitectura.com
-            pm2 delete "mgarquitectura.com" >/dev/null 2>&1 || true
-            pm2 serve . 3004 --name "mgarquitectura.com" --spa
+            pm2 delete mgarquitectura.com || true
+            pm2 start npm --name "mgarquitectura.com" -- run open:dist
             pm2 save
