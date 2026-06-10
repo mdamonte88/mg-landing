@@ -80,7 +80,7 @@ jobs:
           username: ${{ secrets.DO_USER }}
           key: ${{ secrets.DO_SSH_KEY }}
           port: ${{ secrets.DO_PORT }}
-          source: "dist/*"
+          source: "dist"
           target: /var/www/mgarquitectura.com
 
       - name: Reload PM2
