@@ -23,7 +23,23 @@ const assets = require('./build/assets.json'); // eslint-disable-line import/no-
 
 const server = express();
 
-const cacheTime = 31536000;
+const cacheTime = '1y';
+
+const setStaticCacheHeaders = (res, filePath) => {
+  const normalizedPath = filePath.replace(/\\/g, '/');
+
+  if (normalizedPath.endsWith('main-sw.js') || normalizedPath.endsWith('.html')) {
+    res.setHeader('Cache-Control', 'no-cache');
+    return;
+  }
+
+  if (
+    /\.(js|css|png|jpe?g|gif|svg|ico|mp4|webm|ogg|woff2?|ttf|eot)$/i
+      .test(normalizedPath)
+  ) {
+    res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+  }
+};
 
 server
   .disable('x-powered-by')
@@ -32,11 +48,8 @@ server
     'server/build/public',
     {
       maxAge: cacheTime,
-      setHeaders: (res, path) => {
-        if (/main-sw.js/.test(path)) {
-          res.setHeader('Cache-Control', 'public, max-age=0');
-        }
-      }
+      immutable: true,
+      setHeaders: setStaticCacheHeaders,
     },
   ))
   .get('*', async (req, res) => {

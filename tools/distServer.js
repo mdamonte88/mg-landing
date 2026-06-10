@@ -10,6 +10,23 @@ console.log(chalkProcessing('Opening production build...'));
 
 const port = 3004;
 const app = express();
+const cacheTime = '1y';
+
+const setStaticCacheHeaders = (res, filePath) => {
+  const normalizedPath = filePath.replace(/\\/g, '/');
+
+  if (normalizedPath.endsWith('index.html') || normalizedPath.endsWith('pwa.html')) {
+    res.setHeader('Cache-Control', 'no-cache');
+    return;
+  }
+
+  if (
+    /\.(js|css|png|jpe?g|gif|svg|ico|mp4|webm|ogg|woff2?|ttf|eot)$/i
+      .test(normalizedPath)
+  ) {
+    res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+  }
+};
 
 app.use(historyApiFallback());
 app.get(/\.js$|\.css$/, (req, res, next) => {
@@ -17,7 +34,11 @@ app.get(/\.js$|\.css$/, (req, res, next) => {
   next();
 });
 
-app.use(express.static(__dirname + '/../dist'));
+app.use(express.static(__dirname + '/../dist', {
+  maxAge: cacheTime,
+  immutable: true,
+  setHeaders: setStaticCacheHeaders,
+}));
 app.get('*', function response(req, res) {
   res.sendFile(path.join(__dirname, '../dist/index.html'));
 });

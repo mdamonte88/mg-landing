@@ -228,7 +228,10 @@ droplet-01
     key: ${{ secrets.DO_SSH_KEY }}
     port: ${{ secrets.DO_PORT }}
     script: |
-      pm2 restart mgarquitectura.com --update-env
+      cd /var/www/mgarquitectura.com
+      pm2 delete mgarquitectura.com >/dev/null 2>&1 || true
+      pm2 serve . 3004 --name mgarquitectura.com --spa
+      pm2 save
 ```
 
 ---
