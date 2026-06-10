@@ -94,5 +94,5 @@ jobs:
             set -e
             cd /var/www/mgarquitectura.com
             pm2 delete mgarquitectura.com || true
-            pm2 start npm --name "mgarquitectura.com" -- run open:dist
+            NODE_ENV=production pm2 start npm --name "mgarquitectura.com" -- run open:dist
             pm2 save
