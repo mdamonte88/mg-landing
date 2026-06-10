@@ -96,5 +96,5 @@ jobs:
             if pm2 describe "mgarquitectura.com" >/dev/null 2>&1; then
               pm2 restart "mgarquitectura.com" --update-env
             else
-              pm2 start npm --name "mgarquitectura.com" -- run start
+              pm2 start --name "mgarquitectura.com" npm -- start
             fi
